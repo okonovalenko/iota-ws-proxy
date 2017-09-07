@@ -1,0 +1,10 @@
+{
+    "port": "5000",
+    "iriUrl": "http://localhost:14600",
+    "username": "admin",
+    "password": "iota_is_awesome",
+    "authTimeout": 1000,
+    "updateInterval": 3000,
+    "updateCommands": "getNodeInfo,getNeighbors",
+    "updateIntervalOS": 3000
+}
