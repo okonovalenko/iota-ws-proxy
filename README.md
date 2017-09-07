@@ -2,7 +2,7 @@
 IOTA IRI WebSocket server acts as a proxy between IRI service and other applications. 
 It supports all standard IRI Api commands and can be configured to automatically call those commands and push via WebSocket.
 
-[iota-ws-client](https://github.com/okonovalenko/iota-ws-client)
+Please also see [iota-ws-client](https://github.com/okonovalenko/iota-ws-client)
 
 ## Installation
 
