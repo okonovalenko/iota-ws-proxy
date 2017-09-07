@@ -41,7 +41,7 @@ nano config.json
 ```
 
 ### Install PM2 node service manager.
-The PM2 is an excellent Nodejs service manager, it will run as aservice, monitor and restart your instance in case of a crash or on pc startup.   
+The PM2 is an excellent Nodejs service manager, it will run it as a service, monitor and restart your instance in case of a crash or on pc startup.   
 
 ```
 npm install pm2 -g
