@@ -8,15 +8,19 @@ It supports all standard IRI Api commands and can be configured to automatically
 ### Prerequisites
 
 #### Install Nodejs
-`sudo apt-get update`
-`curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -`
-`sudo apt-get install nodejs`
+```
+sudo apt-get update
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+sudo apt-get install nodejs
+```
 
 #### Setup
-`git clone https://github.com/okonovalenko/iota-ws-proxy.git`
-`cd iota-ws-proxy`
-`npm install`
-`cp example.config.json config.json`
+```
+git clone https://github.com/okonovalenko/iota-ws-proxy.git
+cd iota-ws-proxy
+npm install
+cp example.config.json config.json
+```
 
 #### Configuration
 Next you need to modify config.json with username and password which will be used on the client to authenticate with proxy.
