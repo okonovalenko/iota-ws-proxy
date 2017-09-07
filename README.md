@@ -44,7 +44,7 @@ The PM2 is an excellent Nodejs service manager, it will run it as a service, mon
 
 ```
 npm install pm2 -g
-pm2 start server.js
+pm2 start server.js # starts server.js as a service
 pm2 list # to check that WebSocket server is running
 pm2 monit # to monitor your instances
 ```
