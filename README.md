@@ -23,7 +23,7 @@ cp example.config.json config.json
 ```
 
 ### Configuration
-Next you need to modify config.json with username and password which will be used on the client to authenticate with proxy.
+Next, you need to modify config.json with username and password that will be used on the client to authenticate with proxy.
 ```
 nano config.json 
 ```
@@ -41,7 +41,7 @@ nano config.json
 ```
 
 ### Install PM2 node service manager.
-PM2 is an excellent nodejs service manager it will run, monitor and restart your instance, if crashed.   
+The PM2 is an excellent Nodejs service manager, it will run as aservice, monitor and restart your instance in case of a crash or on pc startup.   
 
 ```
 npm install pm2 -g
