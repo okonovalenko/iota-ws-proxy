@@ -18,12 +18,12 @@ sudo apt-get install nodejs
 git clone https://github.com/okonovalenko/iota-ws-proxy.git
 cd iota-ws-proxy
 npm install
-cp example.config.json config.json
 ```
 
 ### 3. Configuration
 Next, you need to modify config.json with username and password that will be used on the client to authenticate with proxy.
 ```
+cp example.config.json config.json
 nano config.json 
 ```
 ```
