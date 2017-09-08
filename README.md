@@ -53,6 +53,6 @@ pm2 monit # to monitor your instances
 
 ##### Make it run on computer restart
 ```
-pm2 startup
-pm2 save
+sudo pm2 startup
+sudo pm2 save
 ```
