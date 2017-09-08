@@ -1,7 +1,7 @@
 # IOTA IRI WebSocket proxy
 
 IOTA IRI WebSocket server acts as a proxy between IRI service and other applications. 
-It supports all standard IRI Api commands and can be configured to automatically call those commands and push via WebSocket.
+It supports all standard IRI API post commands, also can be configured to automatically call those commands and push via WebSocket to the client application.
 
 Please also see [iota-ws-client](https://github.com/okonovalenko/iota-ws-client)
 
@@ -23,21 +23,21 @@ npm install
 ```
 
 ### 3. Configuration
-Next, you need to modify config.json with username and password that will be used on the client to authenticate with proxy.
+Next, you need to modify config.json with username and password that will be used on the client to authenticate with the proxy.
 ```
 cp example.config.json config.json
 nano config.json 
 ```
 ```
 {
-    "port": "5000", # port that will be used for incoming connections.
-    "iriUrl": "http://localhost:14600", # IRI WebApi url.
+    "port": "5000", # port that will be used for incoming ws connections.
+    "iriUrl": "http://localhost:14600", # IRI Api access url.
     "username": "admin",
     "password": "iota_is_awesome",
     "authTimeout": 1000, # authentication timeout on WebSocket connection in ms. 
     "updateInterval": 3000, # interval in ms for IRI command updates.
-    "updateCommands": "getNodeInfo,getNeighbors", # commands to query on updateInterval elapse.
-    "updateIntervalOS": 3000 # interval in ms for OS updates.
+    "updateCommands": "getNodeInfo,getNeighbors", # commands to query when updateInterval elapses.
+    "updateIntervalOS": 3000 # interval in ms for OS updates to measure CPU load and memory usage on the server.
 }
 ```
 
