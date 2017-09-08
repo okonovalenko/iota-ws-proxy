@@ -1,6 +1,6 @@
 # IOTA IRI WebSocket proxy
 
-IOTA IRI WebSocket server acts as a proxy between IRI service and other applications. 
+IOTA IRI WebSocket nodejs server acts as a proxy between IRI service and other applications. 
 It supports all standard IRI API post commands, also can be configured to automatically call those commands and push via WebSocket to the client application.
 
 Please also see [iota-ws-client](https://github.com/okonovalenko/iota-ws-client)
@@ -42,7 +42,7 @@ nano config.json
 ```
 
 ### 4. Install PM2 node service manager.
-The PM2 is an excellent Nodejs service manager, it will run it as a service, monitor and restart your instance in case of a crash or on pc startup.   
+The PM2 is an excellent Nodejs service manager, it will run ./server.js as a service, monitor and restart your instance in case of a crash or on pc startup.   
 
 ```
 npm install pm2 -g
