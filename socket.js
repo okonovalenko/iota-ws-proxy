@@ -16,10 +16,10 @@ const handleError = (error, socket, reqId) => {
         console.log('Response error:', error.response.status, error.response.data);
         error_resp = { error: error.response.data, reqId: reqId };
     } else if (error.request) {
-        console.log('Bad request command');
-        error_resp = { error: 'Bad request command', reqId: reqId };
+        console.log('The request was made but no response was received');
+        error_resp = { error: 'The request was made but no response was received', reqId: reqId };
     } else {
-        console.log('Error', error.message);
+        console.log('Internal error', error.message);
         error_resp = { error: 'Internal error', reqId: reqId };
     }
 
@@ -43,10 +43,9 @@ const disconnect = (socket) => {
 };
 
 const postAuthenticate = (socket) => {
-    console.log('socket authenticated', socket.id);
 
     socket.on(REQ_COMMAND, (data) => {
-        console.log(REQ_COMMAND, data);
+
         if (!data) return;
         var reqId = data.reqId;
         axios.post(config.iriUrl, data)
@@ -87,7 +86,6 @@ const initOsTimer = (io) => {
 
     setInterval(() => {
         os.cpuUsage((cpu) => {
-
             var data = {
                 cpuUsage: cpu,
                 cpuCount: os.cpuCount(),
@@ -102,11 +100,8 @@ const initOsTimer = (io) => {
             };
 
             io.emit(ON_OS_UPDATE, { data });
-
         });
-
     }, config.updateIntervalOS);
-
 };
 
 const initSocketServer = (server) => {
