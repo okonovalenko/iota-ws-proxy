@@ -42,7 +42,7 @@ nano config.json
 ```
 
 ### 4. Install PM2 node service manager.
-The PM2 is an excellent Nodejs service manager, it will run ./server.js as a service, monitor and restart your instance in case of a crash or on pc startup.   
+The PM2 is an excellent Nodejs service manager, it will run ./server.js as a service, monitor and restart in case of a crash.
 
 ```
 npm install pm2 -g
@@ -51,7 +51,7 @@ pm2 list # to check that WebSocket server is running
 pm2 monit # to monitor your instances
 ```
 
-##### Make it run on computer restart
+##### Make it run when computer restarts.
 ```
 sudo pm2 startup
 sudo pm2 save
